@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const whatsappUrl = 'https://wa.me/919654480864';
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -21,37 +22,22 @@ export function FloatingCTA() {
   }, []);
 
   const handleClick = () => {
-    const element = document.getElementById('contact');
-    element?.scrollIntoView({ behavior: 'smooth' });
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <>
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/5551234567"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`fixed bottom-6 right-6 z-40 transition-all duration-300 ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
-        }`}
+    <div
+      className={`fixed bottom-5 right-5 z-40 transition-all duration-300 sm:bottom-6 sm:right-6 ${
+        isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-16 opacity-0'
+      }`}
+    >
+      <Button
+        onClick={handleClick}
+        className="h-12 rounded-full border border-white/10 bg-primary px-5 text-primary-foreground shadow-[0_18px_45px_rgba(24,212,255,0.24)] hover:bg-primary/90"
       >
-        <div className="bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 rounded-full p-4 transition-all animate-bounce">
-          <MessageCircle className="w-6 h-6 text-foreground" />
-        </div>
-      </a>
-
-      {/* Sticky CTA Button */}
-      {isVisible && (
-        <div className="fixed bottom-6 left-6 z-40 hidden sm:block">
-          <Button
-            onClick={handleClick}
-            className="bg-gradient-primary hover:opacity-90 text-foreground font-semibold shadow-lg shadow-primary/50 rounded-full"
-          >
-            Book Consultation
-          </Button>
-        </div>
-      )}
-    </>
+        <MessageCircle className="w-4 h-4" />
+        Chat On WhatsApp
+      </Button>
+    </div>
   );
 }

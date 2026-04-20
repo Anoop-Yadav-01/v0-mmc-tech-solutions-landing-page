@@ -1,66 +1,138 @@
 'use client';
 
+import { ArrowUpRight, BriefcaseBusiness, TrendingUp, Users, WalletCards } from 'lucide-react';
 import { Card } from './ui/card';
 
 const results = [
   {
-    metric: '3X',
-    label: 'Lead Growth',
-    description: 'Average increase in qualified leads for our clients',
+    metric: '3x',
+    label: 'Qualified Lead Growth',
+    description: 'Average uplift in enquiry quality after redesign, funnel cleanup, and SEO improvements.',
+    note: 'Landing pages, local SEO, and conversion flow',
+    icon: TrendingUp,
   },
   {
     metric: '50+',
-    label: 'Websites Delivered',
-    description: 'Successfully completed projects across industries',
+    label: 'Projects Delivered',
+    description: 'Business websites, service portals, and custom builds launched across multiple industries.',
+    note: 'From simple company sites to custom systems',
+    icon: BriefcaseBusiness,
   },
   {
     metric: '500+',
-    label: 'Happy Clients',
-    description: 'Businesses we&apos;ve helped grow and succeed',
+    label: 'Client Relationships',
+    description: "Businesses we've supported with stronger digital presence, better usability, and scalable execution.",
+    note: 'Built with long-term growth in mind',
+    icon: Users,
   },
   {
     metric: '150%',
     label: 'Average ROI',
-    description: 'Return on investment within 6 months',
+    description: 'Measured performance gains from lead generation, faster response flow, and stronger online visibility.',
+    note: 'Focused on outcomes, not just visuals',
+    icon: WalletCards,
   },
+];
+
+const proofPoints = [
+  'Clearer conversion paths',
+  'Stronger search visibility',
+  'Faster project delivery',
 ];
 
 export function Results() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform translate-x-1/2"></div>
-      </div>
+    <section id="proof" className="relative py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="surface-panel-strong relative overflow-hidden rounded-[2rem] p-8 sm:p-10 lg:p-12">
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(24,212,255,0.08),transparent_28%,transparent_72%,rgba(20,120,255,0.12))]"></div>
+          <div className="absolute inset-y-0 right-0 w-[42%] bg-[radial-gradient(circle_at_top_right,rgba(24,212,255,0.10),transparent_62%)]"></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Results That Speak
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Proven metrics from real clients achieving real growth
-          </p>
-        </div>
+          <div className="relative grid items-start gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+            <div className="max-w-2xl">
+              <div className="section-label">Proof & Performance</div>
 
-        {/* Results grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {results.map((result, index) => (
-            <Card
-              key={index}
-              className="glass-effect p-8 border border-border/50 text-center hover:border-secondary/50 transition-all hover:shadow-lg hover:shadow-secondary/20"
-            >
-              <div className="text-5xl sm:text-6xl font-bold text-transparent bg-gradient-primary bg-clip-text mb-3">
-                {result.metric}
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                {result.label}
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                {result.description}
+              <h2 className="mt-6 font-display text-4xl font-semibold leading-tight tracking-[-0.04em] text-foreground sm:text-5xl lg:text-[3.6rem]">
+                Results that make your business look credible and perform better.
+              </h2>
+
+              <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">
+                MMC Tech Solutions focuses on more than clean visuals. We build digital
+                experiences that help businesses generate leads, improve trust, and convert
+                more visitors into real enquiries.
               </p>
-            </Card>
-          ))}
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                {proofPoints.map((point) => (
+                  <div
+                    key={point}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-foreground"
+                  >
+                    {point}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 rounded-[1.6rem] border border-white/10 bg-[linear-gradient(180deg,rgba(8,16,35,0.96),rgba(5,10,24,0.92))] p-6 shadow-[0_20px_50px_rgba(2,10,28,0.28)]">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.28em] text-primary/80">
+                      Why This Matters
+                    </p>
+                    <p className="mt-3 text-base leading-7 text-muted-foreground">
+                      A strong proof section gives visitors confidence quickly. It shows that
+                      your company can deliver measurable value, not just attractive design.
+                    </p>
+                  </div>
+                  <div className="rounded-full border border-primary/20 bg-primary/10 p-3 text-primary">
+                    <ArrowUpRight className="h-5 w-5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              {results.map((result) => {
+                const Icon = result.icon;
+
+                return (
+                  <Card
+                    key={result.label}
+                    className="group rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,24,46,0.96),rgba(11,18,36,0.92))] p-6 shadow-[0_18px_45px_rgba(3,10,28,0.22)] transition-transform duration-300 hover:-translate-y-1 hover:border-primary/20"
+                  >
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-3 text-primary">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <span className="text-xs uppercase tracking-[0.26em] text-primary/70">
+                        MMC Proof
+                      </span>
+                    </div>
+
+                    <div className="mt-8">
+                      <p className="font-display text-5xl font-semibold tracking-[-0.05em] text-foreground sm:text-6xl">
+                        {result.metric}
+                      </p>
+                      <div className="mt-4 h-px w-full bg-[linear-gradient(90deg,rgba(255,255,255,0.16),rgba(24,212,255,0.7),rgba(20,120,255,0.12))]"></div>
+                    </div>
+
+                    <div className="mt-6">
+                      <h3 className="text-xl font-semibold text-foreground">
+                        {result.label}
+                      </h3>
+                      <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                        {result.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      {result.note}
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

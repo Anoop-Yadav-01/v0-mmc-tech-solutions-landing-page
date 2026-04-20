@@ -29,48 +29,47 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="relative py-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 left-12 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(24,212,255,0.12),rgba(6,9,24,0)_72%)] blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            What Clients Say
+        <div className="mb-14 max-w-3xl">
+          <div className="section-label">Client Feedback</div>
+          <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
+            Social proof that now fits the new visual tone
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Real experiences from businesses we&apos;ve partnered with
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">
+            Testimonials are more persuasive when they sit inside a layout that already feels
+            trustworthy, calm, and premium.
           </p>
         </div>
 
-        {/* Testimonials grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="glass-effect p-6 border border-border/50 hover:border-secondary/50 transition-all hover:shadow-lg hover:shadow-primary/20"
+              className="surface-panel rounded-[1.75rem] border-0 p-7"
             >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="mb-6 flex gap-1">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="w-4 h-4 fill-secondary text-secondary"
+                    className="w-4 h-4 fill-primary text-primary"
                   />
                 ))}
               </div>
 
-              {/* Testimonial content */}
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-base leading-8 text-muted-foreground">
                 &quot;{testimonial.content}&quot;
               </p>
 
-              {/* Client info */}
-              <div className="border-t border-border/50 pt-4">
-                <h4 className="font-bold text-foreground">{testimonial.name}</h4>
-                <p className="text-sm text-secondary">{testimonial.company}</p>
+              <div className="mt-auto border-t border-white/10 pt-5">
+                <h4 className="font-display text-lg font-semibold text-foreground">
+                  {testimonial.name}
+                </h4>
+                <p className="mt-1 text-sm text-primary">{testimonial.company}</p>
               </div>
             </Card>
           ))}

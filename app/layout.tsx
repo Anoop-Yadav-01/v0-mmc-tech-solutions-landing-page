@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Manrope, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: 'MMC TECH SOLUTIONS | Web Development, App Development & SEO Services',
@@ -41,7 +48,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-background">
+    <html
+      lang="en"
+      className={`${manrope.variable} ${spaceGrotesk.variable} dark bg-background`}
+    >
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

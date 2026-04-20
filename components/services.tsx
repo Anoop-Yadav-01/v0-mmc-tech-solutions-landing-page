@@ -44,48 +44,54 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
+    <section id="services" className="relative py-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-40 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(24,212,255,0.14),rgba(6,9,24,0)_72%)] blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Our Services
+        <div className="mb-14 max-w-3xl">
+          <div className="section-label">Core Services</div>
+          <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
+            Built as one polished digital system, not disconnected deliverables
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive digital solutions tailored to your business needs
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">
+            Each offer is framed to support the same goal: a sharper brand experience,
+            stronger performance, and easier growth across web, app, and search channels.
           </p>
         </div>
 
-        {/* Services grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card
                 key={index}
-                className="glass-effect glass-effect-hover p-6 group border border-border/50 hover:border-secondary/50"
+                className="surface-panel group relative overflow-hidden rounded-[1.75rem] border-0 p-7"
               >
-                <div className="mb-4 inline-block p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-6 h-6 text-secondary" />
+                <div className="brand-gradient absolute inset-x-0 top-0 h-px opacity-90"></div>
+
+                <div className="flex items-center justify-between gap-4">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <span className="text-xs font-medium tracking-[0.34em] text-muted-foreground">
+                    0{index + 1}
+                  </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="mt-6 font-display text-2xl font-semibold text-foreground">
                   {service.title}
                 </h3>
 
-                <p className="text-muted-foreground mb-4">
+                <p className="mt-3 text-muted-foreground leading-7">
                   {service.description}
                 </p>
 
-                {/* Benefits */}
-                <div className="space-y-2">
+                <div className="mt-6 space-y-3">
                   {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                    <div key={idx} className="flex items-center gap-3 text-sm">
+                      <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_16px_rgba(24,212,255,0.85)]"></div>
                       <span className="text-muted-foreground">{benefit}</span>
                     </div>
                   ))}

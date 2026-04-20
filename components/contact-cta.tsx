@@ -7,6 +7,9 @@ import { Textarea } from './ui/textarea';
 import { Card } from './ui/card';
 import { Mail, Phone, MessageSquare, CheckCircle } from 'lucide-react';
 
+const CALL_NUMBER = '9971167953';
+const WHATSAPP_NUMBER = '919654480864';
+
 export function ContactCTA() {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,8 +21,17 @@ export function ContactCTA() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would send the form data to your backend
-    console.log('Form submitted:', formData);
+    const message = [
+      'Hello MMC Tech Solutions,',
+      '',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || 'Not provided'}`,
+      `Project Details: ${formData.message}`,
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
     setTimeout(() => {
       setFormData({ name: '', email: '', phone: '', message: '' });
@@ -35,89 +47,103 @@ export function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background relative overflow-hidden">
+    <section id="contact" className="relative py-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(24,212,255,0.16),rgba(6,9,24,0)_72%)] blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Schedule your free consultation and let&apos;s discuss your project
-            </p>
-          </div>
+        <div className="surface-panel-strong relative overflow-hidden rounded-[2rem] p-8 sm:p-10 lg:p-12">
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(24,212,255,0.08),transparent_32%,transparent_72%,rgba(20,120,255,0.14))]"></div>
 
-          {/* Content grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Contact info */}
-            <div className="space-y-6">
-              <div className="glass-effect p-6 rounded-lg border border-border/50">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/20">
-                    <Mail className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">
-                      hello@mmctech.com
-                    </p>
+          <div className="relative grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+            <div>
+              <div className="section-label">Contact MMC</div>
+              <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
+                Let&apos;s turn your next idea into calls, chats, and qualified leads
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-muted-foreground">
+                Reach out directly for web development, app development, SEO, or digital
+                growth support. We&apos;ll guide you to the fastest next step for your business.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-foreground">
+                        Email
+                      </h3>
+                      <a
+                        href="mailto:info.makemycards@gmail.com"
+                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        info.makemycards@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="glass-effect p-6 rounded-lg border border-border/50">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/20">
-                    <Phone className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">
-                      +1 (555) 123-4567
-                    </p>
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <Phone className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-foreground">
+                        Phone
+                      </h3>
+                      <a
+                        href={`tel:${CALL_NUMBER}`}
+                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        +91 {CALL_NUMBER}
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="glass-effect p-6 rounded-lg border border-border/50">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/20">
-                    <MessageSquare className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">
-                      WhatsApp
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Chat with us now
-                    </p>
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <MessageSquare className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-foreground">
+                        WhatsApp
+                      </h3>
+                      <a
+                        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        Chat on +91 96544 80864
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact form */}
-            <Card className="glass-effect p-8 border border-border/50">
+            <Card className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(8,16,35,0.94),rgba(5,9,23,0.9))] p-8 shadow-[0_24px_60px_rgba(2,10,28,0.35)]">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-                  <CheckCircle className="w-16 h-16 text-secondary mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-2">
-                    Thanks for reaching out!
+                  <CheckCircle className="w-16 h-16 text-primary mb-4" />
+                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">
+                    WhatsApp chat opened!
                   </h3>
                   <p className="text-muted-foreground">
-                    We&apos;ll be in touch within 24 hours
+                    Your enquiry has been redirected to WhatsApp
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="mb-2 block text-sm font-medium text-foreground">
                       Full Name
                     </label>
                     <Input
@@ -126,13 +152,13 @@ export function ContactCTA() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-input border-border/50 text-foreground placeholder:text-muted-foreground"
+                      className="h-11 rounded-xl border-white/10 bg-white/5 text-foreground placeholder:text-muted-foreground"
                       placeholder="Your name"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="mb-2 block text-sm font-medium text-foreground">
                       Email
                     </label>
                     <Input
@@ -141,13 +167,13 @@ export function ContactCTA() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-input border-border/50 text-foreground placeholder:text-muted-foreground"
+                      className="h-11 rounded-xl border-white/10 bg-white/5 text-foreground placeholder:text-muted-foreground"
                       placeholder="your@email.com"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="mb-2 block text-sm font-medium text-foreground">
                       Phone (Optional)
                     </label>
                     <Input
@@ -155,13 +181,13 @@ export function ContactCTA() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="bg-input border-border/50 text-foreground placeholder:text-muted-foreground"
-                      placeholder="+1 (555) 123-4567"
+                      className="h-11 rounded-xl border-white/10 bg-white/5 text-foreground placeholder:text-muted-foreground"
+                      placeholder="+91 9971167953"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="mb-2 block text-sm font-medium text-foreground">
                       Message
                     </label>
                     <Textarea
@@ -170,20 +196,20 @@ export function ContactCTA() {
                       onChange={handleChange}
                       required
                       rows={4}
-                      className="bg-input border-border/50 text-foreground placeholder:text-muted-foreground"
+                      className="min-h-32 rounded-xl border-white/10 bg-white/5 text-foreground placeholder:text-muted-foreground"
                       placeholder="Tell us about your project"
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-primary hover:opacity-90 text-foreground font-semibold h-11"
+                    className="h-11 w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    Book Free Consultation
+                    Send On WhatsApp
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    We&apos;ll get back to you within 24 hours
+                    Your details will open directly in WhatsApp chat
                   </p>
                 </form>
               )}
