@@ -9,15 +9,26 @@ export function FloatingCTA() {
   const whatsappUrl = 'https://wa.me/919654480864';
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    let ticking = false;
+
+    const updateVisibility = () => {
+      const shouldShow = window.scrollY > 300;
+      setIsVisible((current) => (current === shouldShow ? current : shouldShow));
+      ticking = false;
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    const toggleVisibility = () => {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateVisibility);
+    };
+
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 

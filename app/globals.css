@@ -148,6 +148,36 @@
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .surface-panel,
+  .surface-panel-strong,
+  .section-label {
+    backdrop-filter: none;
+  }
+
+  .animate-float,
+  .animate-float-delayed,
+  .animate-float-slow,
+  .animate-spin-slow,
+  .animate-spin-reverse,
+  .animate-pulse-ring,
+  .animate-pulse-ring-delay,
+  .hero-scan {
+    animation: none !important;
+  }
+
+  .hero-letter {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
 @layer utilities {
   .font-display {
     font-family: var(--font-display), sans-serif;
