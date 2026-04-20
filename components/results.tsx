@@ -7,8 +7,8 @@ const results = [
   {
     metric: '3x',
     label: 'Qualified Lead Growth',
-    description: 'Average uplift in enquiry quality after redesign, funnel cleanup, and SEO improvements.',
-    note: 'Landing pages, local SEO, and conversion flow',
+    description: 'Average uplift in enquiry quality after website optimization, local SEO work, and Meta Ads support.',
+    note: 'Landing pages, SEO, and conversion flow',
     icon: TrendingUp,
   },
   {
@@ -28,16 +28,16 @@ const results = [
   {
     metric: '150%',
     label: 'Average ROI',
-    description: 'Measured performance gains from lead generation, faster response flow, and stronger online visibility.',
-    note: 'Focused on outcomes, not just visuals',
+    description: 'Measured performance gains from performance marketing, lead generation campaigns, and stronger online visibility.',
+    note: 'SEO, Meta Ads, and digital marketing',
     icon: WalletCards,
   },
 ];
 
 const proofPoints = [
-  'Clearer conversion paths',
-  'Stronger search visibility',
-  'Faster project delivery',
+  'SEO and local ranking',
+  'Meta Ads lead generation',
+  'Website and app delivery',
 ];
 
 export function Results() {
@@ -57,9 +57,8 @@ export function Results() {
               </h2>
 
               <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">
-                MMC Tech Solutions focuses on more than clean visuals. We build digital
-                experiences that help businesses generate leads, improve trust, and convert
-                more visitors into real enquiries.
+                MMC Tech Solutions delivers measurable value through website development,
+                app development, SEO services, Meta Ads, and performance marketing built for real business growth.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -81,7 +80,7 @@ export function Results() {
                     </p>
                     <p className="mt-3 text-base leading-7 text-muted-foreground">
                       A strong proof section gives visitors confidence quickly. It shows that
-                      your company can deliver measurable value, not just attractive design.
+                      your company can deliver measurable value through search visibility, ads, and better conversion performance.
                     </p>
                   </div>
                   <div className="rounded-full border border-primary/20 bg-primary/10 p-3 text-primary">

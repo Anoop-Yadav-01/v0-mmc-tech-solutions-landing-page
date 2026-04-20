@@ -15,37 +15,37 @@ const reasons = [
     icon: Zap,
     title: 'Fast Delivery',
     description:
-      'Get your project live quickly without compromising quality. We deliver on time, every time.',
+      'Launch websites, apps, SEO campaigns, and ad funnels quickly without compromising quality.',
   },
   {
     icon: DollarSign,
     title: 'Affordable Pricing',
     description:
-      'High-quality services at competitive rates. Transparent pricing with no hidden costs.',
+      'Transparent pricing for website development, app development, SEO, and digital marketing services.',
   },
   {
     icon: Palette,
     title: 'Business-Focused Design',
     description:
-      'Every pixel serves your business goals. Design that drives conversions and growth.',
+      'Every interface is built to support trust, conversions, and better performance for your business.',
   },
   {
     icon: Headphones,
     title: 'Full Support',
     description:
-      'Dedicated support team available to help you succeed. We&apos;re here for the long term.',
+      'Dedicated support from planning to launch and beyond for growth-focused businesses.',
   },
   {
     icon: Search,
     title: 'SEO Optimized',
     description:
-      'Built-in SEO best practices in every project. Rank higher, get more organic traffic.',
+      'Built with local SEO, on-page SEO, and search visibility best practices from the start.',
   },
   {
     icon: ShieldCheck,
     title: 'Latest Technology',
     description:
-      'We use cutting-edge tech stacks so your product feels modern, fast, and ready to scale.',
+      'Modern stacks and scalable systems for websites, apps, and digital campaigns that can grow with you.',
   },
 ];
 
@@ -61,32 +61,31 @@ export function WhyChooseUs() {
           <div className="surface-panel-strong rounded-[2rem] p-8 sm:p-10">
             <div className="section-label">Why MMC</div>
             <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
-              A cleaner, more credible experience for visitors who need to trust fast
+              Why businesses choose our web, app, SEO, and digital marketing team
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted-foreground">
-              The redesign now supports the logo instead of competing with it. That gives
-              the page a more premium tone and makes each section feel like part of one
-              brand story.
+              MMC Tech Solutions works as a technology company and IT solutions provider
+              for brands that need one reliable team for development, SEO, Meta Ads, and growth.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <p className="text-sm uppercase tracking-[0.28em] text-primary/80">
-                  Brand Fit
+                  IT Solutions
                 </p>
-                <p className="mt-3 font-display text-3xl text-foreground">100%</p>
+                <p className="mt-3 font-display text-3xl text-foreground">Full-Stack</p>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Palette and spacing reworked to feel native to the MMC mark.
+                  Website development, app development, SEO services, Meta Ads, and digital marketing.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <p className="text-sm uppercase tracking-[0.28em] text-primary/80">
-                  UX Focus
+                  Growth Focus
                 </p>
-                <p className="mt-3 font-display text-3xl text-foreground">Clear</p>
+                <p className="mt-3 font-display text-3xl text-foreground">ROI</p>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  The visitor path is now easier to scan from hero to contact.
+                  Planned for rankings, qualified leads, better ad performance, and stronger conversion flow.
                 </p>
               </div>
             </div>

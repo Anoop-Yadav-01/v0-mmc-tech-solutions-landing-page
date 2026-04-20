@@ -13,10 +13,12 @@ export function Footer() {
     { label: 'Contact', href: '#contact' },
   ];
   const services = [
-    'Business websites',
-    'Custom web apps',
-    'Mobile app development',
-    'SEO and lead generation',
+    'Website development',
+    'App development',
+    'SEO services',
+    'Meta Ads',
+    'Digital marketing',
+    'Performance marketing',
   ];
 
   return (
@@ -34,8 +36,8 @@ export function Footer() {
               />
             </div>
             <p className="max-w-xs text-sm leading-7 text-muted-foreground">
-              MMC Tech Solutions builds high-performance websites, scalable apps,
-              and search-ready digital systems for businesses that want real growth.
+              MMC Tech Solutions is a technology company in India delivering website development,
+              app development, SEO services, Meta Ads, digital marketing, and performance marketing.
             </p>
           </div>
 

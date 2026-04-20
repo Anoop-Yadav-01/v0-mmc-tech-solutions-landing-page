@@ -23,41 +23,41 @@ export function Hero() {
 
   const headlineLines = [
     { text: 'We build', tone: 'default' },
-    { text: 'websites, apps, and SEO systems', tone: 'accent' },
-    { text: 'that move your business forward', tone: 'default' },
+    { text: 'websites, apps, SEO, and Meta Ads', tone: 'accent' },
+    { text: 'that grow your business online', tone: 'default' },
   ] as const;
 
   const proofPoints = [
-    'Business websites that convert',
-    'Custom apps built for scale',
-    'SEO systems that drive leads',
+    'Website & app development',
+    'SEO & digital marketing',
+    'Meta Ads & lead generation',
   ];
 
   const orbitCards = [
     {
-      title: 'Web Development',
-      detail: 'Fast interfaces and clean structure',
+      title: 'Website Development',
+      detail: 'Business sites, landing pages, and custom builds',
       className:
         'animate-float absolute left-0 top-10 hidden rounded-2xl border border-white/10 bg-[rgba(7,14,30,0.82)] px-4 py-3 shadow-[0_20px_50px_rgba(3,10,28,0.38)] lg:block',
       icon: Globe,
     },
     {
-      title: 'App Engineering',
-      detail: 'Dashboards, portals, and products',
+      title: 'App Development',
+      detail: 'Android, iOS, and custom product development',
       className:
         'animate-float-delayed absolute right-0 top-20 hidden rounded-2xl border border-white/10 bg-[rgba(7,14,30,0.82)] px-4 py-3 shadow-[0_20px_50px_rgba(3,10,28,0.38)] lg:block',
       icon: Layers3,
     },
     {
-      title: 'SEO Growth',
-      detail: 'Search visibility with intent',
+      title: 'SEO Services',
+      detail: 'Local SEO, rankings, and search visibility',
       className:
         'animate-float-slow absolute left-10 bottom-10 hidden rounded-2xl border border-white/10 bg-[rgba(7,14,30,0.82)] px-4 py-3 shadow-[0_20px_50px_rgba(3,10,28,0.38)] lg:block',
       icon: BarChart3,
     },
     {
-      title: 'Automation',
-      detail: 'Smart workflows for operations',
+      title: 'Meta Ads',
+      detail: 'Facebook and Instagram ad campaigns',
       className:
         'animate-float-delayed absolute right-10 bottom-6 hidden rounded-2xl border border-white/10 bg-[rgba(7,14,30,0.82)] px-4 py-3 shadow-[0_20px_50px_rgba(3,10,28,0.38)] lg:block',
       icon: Cpu,
@@ -123,9 +123,9 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-              MMC Tech Solutions helps businesses launch better digital products,
-              improve online visibility, and turn traffic into qualified enquiries
-              with clean design and reliable development.
+              MMC Tech Solutions is a technology company in India offering website
+              development, app development, SEO services, Meta Ads, digital marketing,
+              and performance marketing for startups, local businesses, and growing brands.
             </p>
 
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -243,17 +243,17 @@ export function Hero() {
                           Custom Development
                         </div>
                         <p className="text-sm text-muted-foreground">
-                          Bespoke websites and apps designed around your business process.
+                          Bespoke website development and app development for your exact business workflow.
                         </p>
                       </div>
 
                       <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                         <div className="mb-3 flex items-center gap-2 text-foreground">
                           <Zap className="h-4 w-4 text-primary" />
-                          Faster Delivery
+                          Performance Marketing
                         </div>
                         <p className="text-sm text-muted-foreground">
-                          Clean execution, clear milestones, and modern implementation.
+                          Digital marketing and paid campaigns planned around measurable ROI and growth.
                         </p>
                       </div>
                     </div>
@@ -265,15 +265,15 @@ export function Hero() {
                       <div className="mt-4 grid gap-3 sm:grid-cols-3">
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                           <Globe className="mb-3 h-5 w-5 text-primary" />
-                          <p className="font-medium text-foreground">Business Websites</p>
+                          <p className="font-medium text-foreground">Website Development</p>
                         </div>
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                           <Layers3 className="mb-3 h-5 w-5 text-primary" />
-                          <p className="font-medium text-foreground">Web & Mobile Apps</p>
+                          <p className="font-medium text-foreground">App Development</p>
                         </div>
                         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                           <BarChart3 className="mb-3 h-5 w-5 text-primary" />
-                          <p className="font-medium text-foreground">SEO Strategy</p>
+                          <p className="font-medium text-foreground">SEO & Meta Ads</p>
                         </div>
                       </div>
                     </div>
@@ -282,21 +282,21 @@ export function Hero() {
 
                 <div className="mt-8 grid gap-3 text-left sm:grid-cols-3">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm font-medium text-foreground">UI that feels premium</p>
+                    <p className="text-sm font-medium text-foreground">Web presence that converts</p>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Strong first impression with a cleaner visual system.
+                      Website development built to improve trust, speed, and conversion flow.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm font-medium text-foreground">Engineering that scales</p>
+                    <p className="text-sm font-medium text-foreground">Apps that scale</p>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Flexible builds for operations, services, and product workflows.
+                      Custom app development for service businesses, startups, and growing operations.
                     </p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <p className="text-sm font-medium text-foreground">Growth with purpose</p>
+                    <p className="text-sm font-medium text-foreground">SEO and paid growth</p>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Better search presence and conversion-focused call-to-action flow.
+                      SEO services, Meta Ads, and digital marketing that bring qualified traffic.
                     </p>
                   </div>
                 </div>

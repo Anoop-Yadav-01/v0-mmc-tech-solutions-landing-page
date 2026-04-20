@@ -6,39 +6,39 @@ import { Card } from './ui/card';
 const services = [
   {
     icon: Globe,
-    title: 'Static Website Development',
-    description: 'Fast-loading, SEO-optimized static websites perfect for portfolios and business cards.',
-    benefits: ['Quick deployment', 'Maximum speed', 'Low maintenance'],
+    title: 'Website Development Services',
+    description: 'Custom website development for company websites, landing pages, ecommerce stores, and responsive business websites.',
+    benefits: ['Responsive website development', 'Business website design', 'Custom website solutions'],
   },
   {
     icon: Code,
-    title: 'Dynamic Website Development',
-    description: 'Custom web applications with databases and real-time features for complex businesses.',
-    benefits: ['Real-time functionality', 'Custom solutions', 'Scalable architecture'],
+    title: 'App Development Services',
+    description: 'Android, iOS, and custom app development services built for startups, service businesses, and digital products.',
+    benefits: ['Android app development', 'Custom app development', 'Scalable architecture'],
   },
   {
     icon: BarChart3,
-    title: 'E-commerce Development',
-    description: 'Complete online store solutions with payment integration and inventory management.',
-    benefits: ['Payment processing', 'Inventory management', 'Order tracking'],
+    title: 'SEO Services Company',
+    description: 'Search engine optimization services including local SEO, on-page SEO, off-page SEO, and Google ranking support.',
+    benefits: ['Local SEO services', 'On-page SEO', 'Off-page SEO'],
   },
   {
     icon: Zap,
-    title: 'SaaS Solutions',
-    description: 'Build subscription-based platforms with user authentication and advanced features.',
-    benefits: ['User management', 'Billing integration', 'Analytics dashboard'],
+    title: 'Meta Ads Management',
+    description: 'Facebook Ads and Instagram Ads campaigns designed for lead generation, retargeting, and better conversion performance.',
+    benefits: ['Facebook Ads', 'Instagram Ads', 'Lead generation ads'],
   },
   {
     icon: Smartphone,
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform mobile applications for iOS and Android devices.',
-    benefits: ['iOS & Android', 'User-friendly design', 'High performance'],
+    title: 'Digital Marketing Services',
+    description: 'Digital marketing support for visibility, content direction, campaign planning, and stronger business positioning online.',
+    benefits: ['Digital strategy', 'Brand visibility', 'Marketing support'],
   },
   {
     icon: Search,
-    title: 'SEO Services',
-    description: '3X your online visibility with proven SEO strategies and continuous optimization.',
-    benefits: ['Keyword research', 'On-page optimization', 'Link building'],
+    title: 'Performance Marketing Agency',
+    description: 'Performance marketing campaigns focused on ROI, paid ads management, conversion tracking, and scalable growth.',
+    benefits: ['Paid ads management', 'ROI tracking', 'Conversion optimization'],
   },
 ];
 
@@ -53,11 +53,11 @@ export function Services() {
         <div className="mb-14 max-w-3xl">
           <div className="section-label">Core Services</div>
           <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
-            Built as one polished digital system, not disconnected deliverables
+            Website development, app development, SEO, Meta Ads, and digital marketing under one team
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            Each offer is framed to support the same goal: a sharper brand experience,
-            stronger performance, and easier growth across web, app, and search channels.
+            We work as a full digital solutions company for businesses that need custom
+            software, websites, mobile apps, search engine optimization, and performance marketing.
           </p>
         </div>
 

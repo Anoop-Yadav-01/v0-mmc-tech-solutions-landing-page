@@ -60,11 +60,12 @@ export function ContactCTA() {
             <div>
               <div className="section-label">Contact MMC</div>
               <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
-                Let&apos;s turn your next idea into calls, chats, and qualified leads
+                Let&apos;s talk about website development, app development, SEO, or Meta Ads
               </h2>
               <p className="mt-5 text-lg leading-8 text-muted-foreground">
-                Reach out directly for web development, app development, SEO, or digital
-                growth support. We&apos;ll guide you to the fastest next step for your business.
+                Reach out directly for website development, app development, SEO services,
+                Meta Ads, digital marketing, or performance marketing. We&apos;ll guide you to
+                the fastest next step for your business in New Delhi and across India.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -197,7 +198,7 @@ export function ContactCTA() {
                       required
                       rows={4}
                       className="min-h-32 rounded-xl border-white/10 bg-white/5 text-foreground placeholder:text-muted-foreground"
-                      placeholder="Tell us about your project"
+                      placeholder="Tell us about your website, app, SEO, Meta Ads, or digital marketing project"
                     />
                   </div>
 
@@ -209,7 +210,7 @@ export function ContactCTA() {
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    Your details will open directly in WhatsApp chat
+                    Your details will open directly in WhatsApp chat for a faster discussion
                   </p>
                 </form>
               )}

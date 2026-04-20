@@ -14,30 +14,34 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'MMC TECH SOLUTIONS | Web Development, App Development & SEO Services',
-  description: 'Transform your business with world-class web development, mobile app development, and SEO services. Get a free consultation today.',
+  title:
+    'MMC TECH SOLUTIONS | Website Development, App Development, SEO, Meta Ads & Digital Marketing Company in India',
+  description:
+    'MMC Tech Solutions is a technology company in India offering website development, app development, SEO services, Meta Ads, digital marketing, and performance marketing for modern businesses.',
   generator: 'v0.app',
   openGraph: {
-    title: 'MMC TECH SOLUTIONS | Digital Solutions for Modern Businesses',
-    description: 'Expert web, app, and SEO services to boost your business growth and online presence.',
+    title:
+      'MMC TECH SOLUTIONS | Website Development, App Development, SEO & Performance Marketing',
+    description:
+      'Professional website development, app development, SEO services, Facebook Ads, Instagram Ads, digital marketing, and performance marketing solutions for businesses in India.',
     type: 'website',
   },
-  keywords: 'web development, app development, SEO services, digital marketing, web design',
+  keywords:
+    'tech company in India, software company in India, IT solutions company, website development company, app development company, custom software development company, digital solutions company, website development services, business website development, responsive website development, app development services, mobile app development company, custom app development, SEO services company, search engine optimization services, local SEO services, SEO expert in India, Meta Ads expert, Facebook Ads agency, Instagram Ads services, digital marketing services, performance marketing agency, website development company in New Delhi, SEO services in New Delhi',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
       },
     ],
+    shortcut: '/favicon-32x32.png',
     apple: '/apple-icon.png',
   },
 }
