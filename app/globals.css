@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --site-header-offset: clamp(5.5rem, 8vw, 6.75rem);
   --background: #060918;
   --foreground: #f7fbff;
   --card: #091121;
@@ -122,6 +123,10 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--site-header-offset);
+  }
+  section[id] {
+    scroll-margin-top: calc(var(--site-header-offset) + 0.5rem);
   }
   body {
     @apply bg-background text-foreground;
@@ -134,6 +139,12 @@
   ::selection {
     background: rgba(24, 212, 255, 0.28);
     color: #f7fbff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
