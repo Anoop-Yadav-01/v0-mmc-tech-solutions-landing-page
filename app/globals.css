@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0D0221;
+  --foreground: #FFFFFF;
+  --card: #1a0e2e;
+  --card-foreground: #FFFFFF;
+  --popover: #1a0e2e;
+  --popover-foreground: #FFFFFF;
+  --primary: #5B2EFF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #00F5FF;
+  --secondary-foreground: #0D0221;
+  --muted: #2d1b4e;
+  --muted-foreground: #B0B3C0;
+  --accent: #00F5FF;
+  --accent-foreground: #0D0221;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #FFFFFF;
+  --border: #2d1b4e;
+  --input: #1a0e2e;
+  --ring: #5B2EFF;
+  --chart-1: #5B2EFF;
+  --chart-2: #00F5FF;
+  --chart-3: #66FFFF;
+  --chart-4: #7C4DFF;
+  --chart-5: #1ae9de;
+  --radius: 0.625rem;
+  --sidebar: #1a0e2e;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #5B2EFF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #00F5FF;
+  --sidebar-accent-foreground: #0D0221;
+  --sidebar-border: #2d1b4e;
+  --sidebar-ring: #5B2EFF;
+}
+
+.dark {
+  --background: #0D0221;
+  --foreground: #FFFFFF;
+  --card: #1a0e2e;
+  --card-foreground: #FFFFFF;
+  --popover: #1a0e2e;
+  --popover-foreground: #FFFFFF;
+  --primary: #5B2EFF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #00F5FF;
+  --secondary-foreground: #0D0221;
+  --muted: #2d1b4e;
+  --muted-foreground: #B0B3C0;
+  --accent: #00F5FF;
+  --accent-foreground: #0D0221;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #FFFFFF;
+  --border: #2d1b4e;
+  --input: #1a0e2e;
+  --ring: #5B2EFF;
+  --chart-1: #5B2EFF;
+  --chart-2: #00F5FF;
+  --chart-3: #66FFFF;
+  --chart-4: #7C4DFF;
+  --chart-5: #1ae9de;
+  --sidebar: #1a0e2e;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #5B2EFF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #00F5FF;
+  --sidebar-accent-foreground: #0D0221;
+  --sidebar-border: #2d1b4e;
+  --sidebar-ring: #5B2EFF;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, #5B2EFF, #00F5FF);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.3);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(91, 46, 255, 0.5), 0 0 40px rgba(91, 46, 255, 0.3);
+  }
+
+  .text-glow-cyan {
+    color: #00F5FF;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.6), 0 0 20px rgba(0, 245, 255, 0.3);
+  }
+
+  .glass-effect {
+    background: rgba(26, 14, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+  }
+
+  .glass-effect-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glass-effect-hover:hover {
+    background: rgba(26, 14, 46, 0.95);
+    border-color: rgba(0, 245, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+  }
+}
