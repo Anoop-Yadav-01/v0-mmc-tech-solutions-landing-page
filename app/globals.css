@@ -246,11 +246,6 @@
   .animate-pulse-ring-delay {
     animation: pulse-ring 3.8s ease-out 1.9s infinite;
   }
-
-  .team-marquee {
-    animation: team-marquee 34s linear infinite;
-    will-change: transform;
-  }
 }
 
 @keyframes float {
@@ -306,14 +301,5 @@
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
-  }
-}
-
-@keyframes team-marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 0.625rem));
   }
 }
