@@ -47,40 +47,40 @@ export function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="relative py-24">
+    <section id="contact" className="relative py-16 sm:py-20 lg:py-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(24,212,255,0.16),rgba(6,9,24,0)_72%)] blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="surface-panel-strong relative overflow-hidden rounded-[2rem] p-8 sm:p-10 lg:p-12">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+        <div className="surface-panel-strong relative overflow-hidden rounded-[1.5rem] p-4 sm:rounded-[2rem] sm:p-8 lg:p-12">
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(24,212,255,0.08),transparent_32%,transparent_72%,rgba(20,120,255,0.14))]"></div>
 
-          <div className="relative grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-            <div>
+          <div className="relative grid min-w-0 gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-10">
+            <div className="min-w-0">
               <div className="section-label">Contact MMC</div>
-              <h2 className="mt-6 font-display text-4xl font-semibold text-foreground sm:text-5xl">
+              <h2 className="mt-5 max-w-3xl break-words font-display text-3xl font-semibold leading-tight text-foreground sm:mt-6 sm:text-5xl">
                 Let&apos;s talk about website development, app development, SEO, or Meta Ads
               </h2>
-              <p className="mt-5 text-lg leading-8 text-muted-foreground">
+              <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground sm:mt-5 sm:text-lg sm:leading-8">
                 Reach out directly for website development, app development, SEO services,
                 Meta Ads, digital marketing, or performance marketing. We&apos;ll guide you to
                 the fastest next step for your business in New Delhi and across India.
               </p>
 
-              <div className="mt-8 space-y-4">
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
-                      <Mail className="w-5 h-5 text-primary" />
+              <div className="mt-7 space-y-3 sm:mt-8 sm:space-y-4">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:rounded-[1.5rem] sm:p-5">
+                  <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+                    <div className="shrink-0 rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <Mail className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-display text-lg font-semibold text-foreground">
                         Email
                       </h3>
                       <a
                         href="mailto:info.makemycards@gmail.com"
-                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                        className="mt-1 inline-block max-w-full break-words text-sm text-muted-foreground transition-colors hover:text-primary sm:text-base"
                       >
                         info.makemycards@gmail.com
                       </a>
@@ -88,18 +88,18 @@ export function ContactCTA() {
                   </div>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
-                      <Phone className="w-5 h-5 text-primary" />
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:rounded-[1.5rem] sm:p-5">
+                  <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+                    <div className="shrink-0 rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <Phone className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-display text-lg font-semibold text-foreground">
                         Phone
                       </h3>
                       <a
                         href={`tel:${CALL_NUMBER}`}
-                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                        className="mt-1 inline-block max-w-full break-words text-sm text-muted-foreground transition-colors hover:text-primary sm:text-base"
                       >
                         +91 {CALL_NUMBER}
                       </a>
@@ -107,12 +107,12 @@ export function ContactCTA() {
                   </div>
                 </div>
 
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-3">
-                      <MessageSquare className="w-5 h-5 text-primary" />
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:rounded-[1.5rem] sm:p-5">
+                  <div className="flex min-w-0 items-start gap-3 sm:gap-4">
+                    <div className="shrink-0 rounded-2xl border border-white/10 bg-white/[0.06] p-3">
+                      <MessageSquare className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="font-display text-lg font-semibold text-foreground">
                         WhatsApp
                       </h3>
@@ -120,7 +120,7 @@ export function ContactCTA() {
                         href={`https://wa.me/${WHATSAPP_NUMBER}`}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-1 inline-block text-muted-foreground transition-colors hover:text-primary"
+                        className="mt-1 inline-block max-w-full break-words text-sm text-muted-foreground transition-colors hover:text-primary sm:text-base"
                       >
                         Chat on +91 96544 80864
                       </a>
@@ -130,11 +130,11 @@ export function ContactCTA() {
               </div>
             </div>
 
-            <Card className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(8,16,35,0.94),rgba(5,9,23,0.9))] p-8 shadow-[0_24px_60px_rgba(2,10,28,0.35)]">
+            <Card className="min-w-0 rounded-[1.25rem] border border-white/10 bg-[linear-gradient(180deg,rgba(8,16,35,0.94),rgba(5,9,23,0.9))] p-4 shadow-[0_24px_60px_rgba(2,10,28,0.35)] sm:rounded-[1.75rem] sm:p-8">
               {submitted ? (
-                <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
-                  <CheckCircle className="w-16 h-16 text-primary mb-4" />
-                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">
+                <div className="flex min-h-[320px] flex-col items-center justify-center text-center sm:min-h-[400px]">
+                  <CheckCircle className="mb-4 h-14 w-14 text-primary sm:h-16 sm:w-16" />
+                  <h3 className="mb-2 font-display text-2xl font-semibold text-foreground">
                     WhatsApp chat opened!
                   </h3>
                   <p className="text-muted-foreground">
