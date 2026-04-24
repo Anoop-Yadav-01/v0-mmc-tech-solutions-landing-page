@@ -163,7 +163,7 @@ export function Hero() {
                   <p>Planned for performance, clarity, and business-ready delivery.</p>
                 </div>
               ))}
-              </div>
+              </div> 
             </div>
           </div>
 
@@ -230,7 +230,7 @@ export function Hero() {
                           height={370}
                           priority
                           className="logo-glow h-auto w-full object-contain"
-                        />
+                        /> 
                       </div>
                     </div>
                   </div>
